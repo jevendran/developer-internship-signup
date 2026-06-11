@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | Dev Internship</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="profile-body">
+  <nav class="navbar navbar-expand-lg profile-nav">
+    <div class="container">
+      <a class="navbar-brand" href="profile.html"><span class="brand-mark nav-mark">DS</span> Intern Profile</a>
+      <button id="logoutBtn" class="btn btn-outline-light btn-sm" type="button">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container profile-layout">
+    <section class="profile-hero">
+      <p class="eyebrow">Profile</p>
+      <h1 id="profileName">Complete your details</h1>
+      <p id="profileEmail" class="lead-text mb-0"></p>
+      <div class="flow-strip profile-flow" aria-label="Application flow">
+        <span>Register</span>
+        <span>Login</span>
+        <span class="active">Profile</span>
+      </div>
+    </section>
+
+    <section class="profile-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow mb-1">Details</p>
+          <h2>Update profile</h2>
+        </div>
+        <span class="status-chip">Editable</span>
+      </div>
+
+      <div id="alertBox" class="alert d-none" role="alert"></div>
+
+      <form id="profileForm" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="age">Age</label>
+            <input class="form-control" id="age" name="age" type="number" min="1" max="120" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="dob">Date of birth</label>
+            <input class="form-control" id="dob" name="dob" type="date" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="contact">Contact number</label>
+            <input class="form-control" id="contact" name="contact" type="tel" maxlength="20" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="city">City</label>
+            <input class="form-control" id="city" name="city" type="text" maxlength="80">
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="bio">Short bio</label>
+            <textarea class="form-control" id="bio" name="bio" rows="4" maxlength="500"></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-primary mt-4" type="submit">
+          <span class="btn-label">Update profile</span>
+          <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

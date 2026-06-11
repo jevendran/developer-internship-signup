@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS internship_signup
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE internship_signup;
+
+CREATE TABLE IF NOT EXISTS user_profiles (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id VARCHAR(32) NOT NULL UNIQUE,
+  first_name VARCHAR(80) NOT NULL,
+  last_name VARCHAR(80) NOT NULL,
+  email VARCHAR(190) NOT NULL UNIQUE,
+  age TINYINT UNSIGNED NULL,
+  dob DATE NULL,
+  contact VARCHAR(20) NULL,
+  city VARCHAR(80) NULL,
+  bio VARCHAR(500) NULL,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL
+);
